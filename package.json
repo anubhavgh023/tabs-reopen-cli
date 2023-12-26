@@ -1,0 +1,15 @@
+{
+  "name": "tabs-reopen-cli",
+  "version": "1.0.0",
+  "description": "Tabs Reopen CLI is a simple Node.js command-line application that helps you reopen multiple tabs in your browser if you accidentally closed them.",
+  "main": "tabs_reopen.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
