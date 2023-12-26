@@ -18,6 +18,7 @@ Make sure you have the following installed on your system:
 
 - `wmctrl`: A command-line tool to interact with an EWMH/NetWM-compatible X Window Manager.
 - `xdotool`: A command-line tool to simulate keyboard input and mouse activity.
+  
      ```bash
      sudo apt install wmctrl,xdotool
 
