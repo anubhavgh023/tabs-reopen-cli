@@ -42,7 +42,7 @@ async function main() {
     const { numTabsToReopen } = await prompt({
         type: 'number',
         name: 'numTabsToReopen',
-        message: 'Enter the number of tabs to reopen (positive integer):',
+        message: 'Enter the number of tabs to reopen :',
         validate: (input) => {
             const num = parseInt(input);
             return num > 0 ? true : 'Please enter a valid number greater than 0.';
