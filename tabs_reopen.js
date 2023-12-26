@@ -3,10 +3,12 @@ const { prompt } = require('inquirer');
 
 function activateBrowserWindow(browserName) {
     try {
-        // Activate the specified browser window using wmctrl
+        // Activating specified browser window using wmctrl
         execSync(`wmctrl -a "${browserName}"`);
-        // Add a short delay to ensure the window activation
+
+        // Adding a short delay to ensure the window activation
         execSync('sleep 0.5');
+
         console.log(`Activated ${browserName} window.`);
     } catch (error) {
         console.error(`Error activating ${browserName} window: ${error.message}`);
@@ -14,11 +16,12 @@ function activateBrowserWindow(browserName) {
 }
 
 function reopenBrowserTabs(numTabs) {
-    // Send 'Ctrl+Shift+T' to the active window using xdotool
+    // Sending 'Ctrl+Shift+T' to the active window using xdotool
     for (let i = 0; i < numTabs; i++) {
         try {
             execSync('xdotool key --clearmodifiers ctrl+shift+t');
-            // Add a short delay between each command to ensure proper execution
+
+            // Adding short delay between each command to ensure proper execution
             execSync('sleep 1');
         } catch (error) {
             console.error(`Error reopening tabs: ${error.message}`);
@@ -30,7 +33,7 @@ function reopenBrowserTabs(numTabs) {
 async function main() {
     const browsers = ["Google Chrome", "Mozilla Firefox", "Brave"];
 
-    // Prompt the user to choose a browser
+    // Prompting the user to choose a browser
     const { selectedBrowser } = await prompt({
         type: 'list',
         name: 'selectedBrowser',
@@ -38,7 +41,7 @@ async function main() {
         choices: browsers,
     });
 
-    // Prompt the user to enter the number of tabs to reopen
+    // Prompting the user to enter the number of tabs to reopen
     const { numTabsToReopen } = await prompt({
         type: 'number',
         name: 'numTabsToReopen',
@@ -49,10 +52,10 @@ async function main() {
         },
     });
 
-    // Activate the browser window and reopen tabs
+    // Activating the browser window and reopen tabs
     activateBrowserWindow(selectedBrowser);
     reopenBrowserTabs(numTabsToReopen);
 }
 
-// Run the main function
+// Running the main function
 main();
