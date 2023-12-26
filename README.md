@@ -2,10 +2,15 @@
 
 Tabs Reopen CLI is a simple Node.js command-line application that helps you reopen multiple tabs in your browser if you accidentally closed them.
 
+You can reopen a single tab by 'Ctrl+Shift+T'
+
+But, what if you want to reopen 10,20 or 30 tabs in that specific order ? 
+
+Here comes this nodejs-cli tool, Just specify the number of tabs to reopen & the browser, it will reopen the tabs.
+
 ## Features
 
-- Activate a specific browser window.
-- Reopen a specified number of tabs using 'Ctrl+Shift+T'.
+- Reopen a specified number of tabs using 'Ctrl+Shift+T' of the selected browser
 
 ## Prerequisites
 
